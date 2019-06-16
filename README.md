@@ -3,4 +3,10 @@
 参考：https://github.com/Python3WebSpider/ProxyPool
 
 运行：
-run.py
+1. 启动redis
+
+redis-server
+
+2. 运行spider
+
+python3 run.py
