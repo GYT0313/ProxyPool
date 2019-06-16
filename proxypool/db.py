@@ -11,7 +11,7 @@ class RedisClient(object):
     
     存储模块
     """
-    def __init__(self, host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD):
+    def __init__(self, host=REDIS_HOST, port=REDIS_PORT): # 更新2019-06-16，去掉了参数: password=REDIS_PASSWORD
         """[summary]
         
         初始化
@@ -21,7 +21,7 @@ class RedisClient(object):
             port {[type]} -- 端口 (default: {REDIS_PORT})
             password {[type]} -- 密码 (default: {REDIS_PASSWORD})
         """ 
-        self.db = redis.StrictRedis(host=host, port=port, password=password, decode_responses=True)
+        self.db = redis.StrictRedis(host=host, port=port, decode_responses=True) # 更新2019-06-16，去掉了参数: password=password
 
     def add(self, proxy, score=INITIAL_SCORE):
         """[summary]
